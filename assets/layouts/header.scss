@@ -1,0 +1,48 @@
+.header{
+    max-height: 1200px;
+    padding: 2rem;
+
+    &__container {
+        display: grid;
+        gap: 2.5rem;
+        grid-template-columns: 5.25rem 1px 100px 1fr 500px 100px 100px;
+        grid-template-areas: 
+        "logo divider lang empty links search button" ;
+    }
+    &-logo{
+        grid-area: logo;
+
+        h1{
+            font-family: "Playfair Display", serif;
+            font-weight: 700;
+            font-size: 1.5rem;
+            line-height: normal;
+        }
+
+    } 
+    &-divider{
+        grid-area: divider;
+        border: 1px solid black;
+        border-radius: 1px;
+    }
+    &-lang{
+        grid-area: lang;
+    }
+    &-empty{
+        grid-area: empty;
+    }
+    &-links{
+        grid-area: links;
+
+        &__list{
+            display: flex;
+            gap: 2.5rem;
+        }
+    }
+    &-search{
+        grid-area: search;
+    }
+    &-menu-button{
+        grid-area: button;
+    }
+}

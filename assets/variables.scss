@@ -1,0 +1,39 @@
+:root {
+
+
+    --body-16-font-size: 1rem;
+    --body-16-line-height: 1.5rem;
+
+    --body-14-font-size: 0.875rem;
+    --body-14-line-height: 1.25rem;
+    --body-14-letter-spacing: 0.28px;
+
+    --caption-font-size: 0.75rem;
+    --caption-line-height: 1.25rem;
+    --caption-letter-spacing: 0.24px;
+
+    --headline-5-font-size: 1.125rem;
+    --headline-5-line-height: 1.5rem;
+
+    --headline-4-font-size: 1.5rem;
+    --headline-4-line-height: 2rem;
+
+    --headline-3-font-size: 2rem;
+    --headline-3-line-height: 2.5rem;
+
+    --headline-2-font-size: 2.5rem;
+    --headline-2-line-height: 2.5rem;
+
+    --headline-1-font-size: 3rem;
+    --headline-1-line-height: 3rem;
+
+
+}
+
+$breakpoint-xs:0;
+$breakpoint-sm: 480px;
+$breakpoint-md: 768px;
+$breakpoint-lg: 1024px;
+$breakpoint-xl: 1260px;
+$breakpoint-xxl: 1400px;
+$breakpoint-xxxl: 1560px;
