@@ -1,6 +1,6 @@
 interface Slide {
     "title": string,
-    "description": Array<{
+    "description": {
       "col1": {
         "title": string,
         "description": string
@@ -9,7 +9,7 @@ interface Slide {
         "title": string,
         "description": string
       }
-    }>,
+    },
     "link": string,
     "image": string,
     "id": string

@@ -16,8 +16,7 @@ export const useHTTP = () => {
     }
 
     async function useCustomFetch<T>(url: string, options = {}): Promise<T> {
-        const finalUrl = (url.slice(0, 4) !== "http"|| url.slice(0, 5) !== "https") ? `${baseURL}${url}` : url
-
+        const finalUrl = (url.slice(0, 4) !== "http" && url.slice(0, 5) !== "https") ? `${baseURL}${url}` : url
         const res = await $fetch<T>(finalUrl, { headers: headers, ...options })
         
         if (!res)

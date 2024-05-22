@@ -3,10 +3,13 @@
     width: 100%;
     padding: 2rem;
     margin: 0 auto;
-
+    position: relative;
+    z-index: 9999 !important;
+    
     &__container {
         display: grid;
         align-items: center;
+        height: 2rem;
         gap: 2.5rem;
         grid-template-columns: 5.25rem 1px 1fr 27.2rem 3.75rem 1.6rem;
         grid-template-areas: 
@@ -16,6 +19,17 @@
             grid-template-columns: 5.25rem 1px 1fr minmax(3.75rem, 35rem) 1.6rem;
             grid-template-areas:
             "logo divider lang search button" ;
+
+            @media screen and (max-width: 560px) {
+                grid-template-columns: minmax(3.75rem, 1fr) 1.6rem;
+                grid-template-areas: 
+                "search button" ;
+
+                .header-logo{
+                    display: none;
+                }
+                
+            }
         }
 
         &.menu-open{
@@ -28,6 +42,12 @@
             grid-template-columns: 5.25rem 1px 1fr 3.75rem 1.6rem;
             grid-template-areas: 
             "logo divider lang search button" ;
+            
+        }
+        @media screen and (max-width: 560px) {
+            grid-template-columns: 5.25rem 1fr 1.6rem;
+            grid-template-areas: 
+            "logo search button" ;
             
         }
     }
@@ -52,6 +72,11 @@
         border-left: 1px solid rgba(0, 0, 0, 0.2);
         border-radius: 1px;
         height: 100%;
+
+        @media screen and (max-width: 560px) {
+            display: none;
+            
+        }
     }
     &-lang{
         grid-area: lang;
@@ -69,6 +94,11 @@
             &:hover{
                 color: rgba(66, 90, 32, 1);
             }
+        }
+
+        @media screen and (max-width: 560px) {
+            display: none;
+            
         }
         
     }
@@ -121,6 +151,17 @@
 
         }
 
+        &-input{
+            display: none;
+            border: none;
+            outline: none;
+            width: 100%;
+            font-size: 0.875rem;
+            line-height: normal;
+            background-color: transparent;
+        }
+
+
         &-button{
             &:hover svg path{
                 fill: rgba(66, 90, 32, 1);
@@ -171,27 +212,16 @@
             display: none;
         }
 
-        &-input{
-            display: none;
-            border: none;
-            outline: none;
-            width: 100%;
-            font-size: 0.875rem;
-            line-height: normal;
-        }
-
+        
         
         
     }
     &-menu-button{
         grid-area: button;
-
-        &.menu-open{
-
-            display: flex;
-            gap: 1rem;
-            font-weight: 600;
-        }
+        display: flex;
+        gap: 1rem;
+        font-weight: 600;
+        
         &:hover svg path{
             fill: rgba(66, 90, 32, 1);
         }
@@ -199,13 +229,9 @@
 
     &-sidebar{
         position: absolute;
-        display: flex;
-        justify-content: center;
-        flex-direction: column;
         overflow: hidden;
 
-        z-index: -1;
-        top: 6rem;
+        top: 0;
         left: 0;
         bottom: 0;
         right: 0;
@@ -219,15 +245,33 @@
         opacity: 0;
         transition: opacity 0.5s ease-in-out,z-index 0.5s ease-in-out;
 
-        &-links{
-            display: flex;
+        &__container{
+            max-width: 1200px;
+            width: 100%;
+            padding: 2rem;
+            margin: 0 auto;
+            display: grid;
             align-items: center;
+            gap: 2.5rem;
+            grid-template-columns: 5.25rem 1px 1fr 5rem;
+            grid-template-areas: 
+            "logo divider lang button" ;
+        }
+        
+
+        &-links{
+            height: calc(100vh - 6rem);
+            display: flex;
             justify-content: center;
+            padding-bottom: 5.5rem;
+
             &__list{
                 display: flex;
                 flex-direction: column;
                 align-items: center;
                 gap: 2.5rem;
+                margin:auto;
+
             }
             &-item{
                 position: relative;
@@ -276,6 +320,8 @@
                 }
             }
         }
+
+
 
         &.open{
             opacity: 1;

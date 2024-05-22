@@ -1,6 +1,7 @@
 <template>
     <div  class="wrapper">
         <Header v-model:menu-open="menuOpen"/>
+        <Sidebar v-model:menu-open="menuOpen"/>
         <main class="main">
             <slot />
         </main>

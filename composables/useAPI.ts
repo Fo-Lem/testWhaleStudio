@@ -4,7 +4,7 @@ export const useAPI = () => {
 
     const apiGetSliders = async (): Promise<Array<Slide> | void> => {
         try {
-            const response = await useCustomFetch<Array<Slide>>("menu",{
+            const response = await useCustomFetch<Array<Slide>>("/menu",{
                 method: "GET"
             })
             if (response&&response.length>0)

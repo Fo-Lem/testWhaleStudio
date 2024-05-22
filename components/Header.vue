@@ -51,45 +51,14 @@
                     <div class="header-search-divider" />
                 </div>
             </div>
-            <button @click="menuOpen = !menuOpen" class="header-menu-button" :class="{ 'menu-open': menuOpen }">
-                <span v-if="menuOpen">Close</span>
-                <IconBase v-if="!menuOpen" :height="26" :width="26" :heightViewBox="26" :watchViewBox="26"
+            <button @click="menuOpen = !menuOpen" class="header-menu-button">
+                <IconBase :height="26" :width="26" :heightViewBox="26" :watchViewBox="26"
                     iconName="IconMenu">
                     <IconsIconMenu />
                 </IconBase>
-                <IconBase v-else :height="20" :width="20" :heightViewBox="14" :watchViewBox="14">
-                    <IconsIconClose></IconsIconClose>
-                </IconBase>
             </button>
         </nav>
-        <nav class="header-sidebar" :class="{ 'open': menuOpen }">
-            <div class="header-sidebar-links">
-                <ul class="header-sidebar-links__list">
-                    <li class="header-sidebar-links-item">
-                        <NuxtLink to="/#">About us</NuxtLink>
-                        <NuxtImg class="header-sidebar-links-item-img left" :src="'interiorImage.png'"></NuxtImg>
-                    </li>
-                    <li class="header-sidebar-links-item">
-                        <NuxtLink to="/#">Architecture</NuxtLink>
-                        <NuxtImg class="header-sidebar-links-item-img right" :src="'architectureImage.png'"></NuxtImg>
-
-                    </li>
-                    <li class="header-sidebar-links-item">
-                        <NuxtLink to="/#">Interior</NuxtLink>
-                        <NuxtImg class="header-sidebar-links-item-img left" :src="'interiorImage.png'"></NuxtImg>
-                    </li>
-                    <li class="header-sidebar-links-item">
-                        <NuxtLink to="/#">Contact</NuxtLink>
-                        <NuxtImg class="header-sidebar-links-item-img right" :src="'architectureImage.png'"></NuxtImg>
-                    </li>
-                    <li class="header-sidebar-links-item">
-                        <NuxtLink to="/#">Shop</NuxtLink>
-                        <NuxtImg class="header-sidebar-links-item-img left" :src="'interiorImage.png'"></NuxtImg>
-
-                    </li>
-                </ul>
-            </div>
-        </nav>
+        
     </header>
 </template>
 

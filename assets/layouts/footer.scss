@@ -3,10 +3,22 @@
     width: 100%;
     padding: 2rem;
     margin: 0 auto;
+    display: grid;
+    gap: 2.5rem;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-areas: 
+    "links navigations .";
+    position: relative;
+    z-index: 9999 !important;
+    &.menu-open{
+        grid-template-columns: 1fr;
+        grid-template-areas: 
+    "links";
+    }
     
     &-links{ 
+        grid-area: links;
         position: relative;
-        z-index: 99999;
         display: flex;
         align-items: center;
         justify-content: flex-start;
@@ -27,6 +39,15 @@
                 color: rgba(66, 90, 32, 1);
             }
         }
+    }
+
+    @media screen and (max-width: 1024px) {
+        justify-items: center;
+        grid-template-columns: 1fr;
+        grid-template-areas: 
+            "navigations "
+            "links";
+        
     }
     
 }
