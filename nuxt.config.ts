@@ -1,9 +1,7 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
     devtools: { enabled: true },
-    modules: [
-        "nuxt-swiper"
-    ],
+    modules: ["nuxt-swiper", "@nuxt/image"],
     app: {
         head: {
             title: "AR.CHI",

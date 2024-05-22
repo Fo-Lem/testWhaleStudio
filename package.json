@@ -13,6 +13,7 @@
     "lint": "run lint:js && run lint:style"
   },
   "dependencies": {
+    "@nuxt/image": "^1.7.0",
     "nuxt": "^3.11.2",
     "nuxt-swiper": "^1.2.2",
     "primeicons": "^7.0.0",

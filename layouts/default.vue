@@ -1,14 +1,17 @@
 <template>
-    <div class="wrapper">
-        <Header />
-        <div class="main">
+    <div  class="wrapper">
+        <Header v-model:menu-open="menuOpen"/>
+        <main class="main">
             <slot />
-        </div>
-        <Footer />
+        </main>
+        <Footer :menu-open="menuOpen"/>
     </div>
 </template>
 
 <script setup lang="ts">
+
+
+const menuOpen = ref(false)
 
 </script>
 
